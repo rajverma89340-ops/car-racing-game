@@ -69,6 +69,7 @@
 
     <div id="road">
         <div id="car"></div>
+        <div id="enemy"></div>
         <div class="line" style="top: 50px;"></div>
         <div class="line" style="top: 200px;"></div>
         <div class="line" style="top: 350px;"></div>
@@ -79,6 +80,8 @@
 <script>
 
     let car = document.getElementById("car");
+    let enemy = document.getElementById("enemy");
+    let enemyPosition = -100;
     let leftBtn = document.getElementById("leftBtn");
     let rightBtn = document.getElementById("rightBtn");
 
@@ -97,7 +100,19 @@
             car.style.left = carPosition + "px";
         }
     };
+let enemySpeed = 3;
 
+function moveEnemy() {
+    enemyPosition = enemyPosition + enemySpeed;
+
+    if (enemyPosition > 500) {
+        enemyPosition = -100;
+    }
+
+    enemy.style.top = enemyPosition + "px";
+}
+
+setInterval(moveEnemy, 30);
 </script>
 </body>
 </html>
