@@ -2,11 +2,71 @@
 <html>
 <head>
     <title>Car Racing Game</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            text-align: center;
+            font-family: Arial;
+            color: white;
+        }
+
+        h1 {
+            margin: 15px;
+        }
+
+        #road {
+            width: 300px;
+            height: 500px;
+            background: #444;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            border-left: 8px solid white;
+            border-right: 8px solid white;
+        }
+
+        #car {
+            width: 50px;
+            height: 80px;
+            background: red;
+            position: absolute;
+            bottom: 20px;
+            left: 125px;
+            border-radius: 10px;
+        }
+
+        .line {
+            width: 8px;
+            height: 70px;
+            background: white;
+            position: absolute;
+            left: 146px;
+        }
+
+        #leftBtn, #rightBtn {
+            font-size: 30px;
+            padding: 15px 35px;
+            margin: 15px 5px;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 
 <body>
 
     <h1>🏎️ Car Racing Game</h1>
+
+    <div id="road">
+        <div id="car"></div>
+        <div class="line" style="top: 50px;"></div>
+        <div class="line" style="top: 200px;"></div>
+        <div class="line" style="top: 350px;"></div>
+    </div>
+
+    <button id="leftBtn">⬅️</button>
+    <button id="rightBtn">➡️</button>
 
 </body>
 </html>
