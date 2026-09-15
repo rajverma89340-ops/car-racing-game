@@ -67,6 +67,28 @@
 
     <button id="leftBtn">⬅️</button>
     <button id="rightBtn">➡️</button>
+<script>
 
+    let car = document.getElementById("car");
+    let leftBtn = document.getElementById("leftBtn");
+    let rightBtn = document.getElementById("rightBtn");
+
+    let carPosition = 125;
+
+    leftBtn.onclick = function() {
+        if (carPosition > 10) {
+            carPosition = carPosition - 20;
+            car.style.left = carPosition + "px";
+        }
+    };
+
+    rightBtn.onclick = function() {
+        if (carPosition < 240) {
+            carPosition = carPosition + 20;
+            car.style.left = carPosition + "px";
+        }
+    };
+
+</script>
 </body>
 </html>
